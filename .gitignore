@@ -1,0 +1,14 @@
+node_modules/
+dist/
+__pycache__/
+*.py[cod]
+*.db
+*.db-wal
+*.db-shm
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+.pytest_cache/
+.DS_Store

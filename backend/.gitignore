@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Environment
+.env
+**/.env
+
+# Database
+*.db
+
+# React
+node_modules/
+**/node_modules/
+dist/
+
+# System
+.DS_Store
