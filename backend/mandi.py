@@ -12,7 +12,7 @@ from fastapi import APIRouter, HTTPException
 
 RESOURCE = "9ef84268-d588-465a-a308-a864a43d0070"
 
-CSV_FILE = Path(__file__).resolve().parents[1] / "data" / "mandi_prices.csv"
+CSV_FILE = Path(__file__).resolve().parent / "data" / "mandi_prices.csv"
 
 COMMODITY = {
     "rice": "Paddy(Dhan)(Common)",

@@ -36,7 +36,14 @@ PROMPT = (
     '"confidence": 0, "severity": "low", '
     '"symptoms": "string", "advice_en": "string", '
     '"advice_hi": "string"}}. '
-    "Set plant_ok to false if the image does not show a crop plant. "
+    "Set plant_ok to true if the image shows any recognizable "
+"crop plant, leaf, stem, fruit, or other plant part. "
+"Even if the leaf is blurry, partially visible, damaged, "
+"or the disease is uncertain, do not reject it if it "
+"reasonably appears to be a crop plant. "
+"Set plant_ok to false ONLY when the image clearly shows "
+"something unrelated to plants, such as a person, vehicle, "
+"document, or household object. "
     "Set healthy to true if the plant appears healthy. "
     "Confidence must be an integer from 0 to 100. "
     "Severity must be low, medium, or high. "
@@ -284,7 +291,7 @@ def make_router(m):
             )
 
             result = parse(ai_text)
-
+            print("DISEASE AI RESULT:", result, flush=True)
         except HTTPException:
             raise
 
