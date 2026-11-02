@@ -5,9 +5,12 @@ import sqlite3, httpx
 from datetime import date, timedelta
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
-import auth
+from . import auth
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from .features import make_router
+from . import disease_ai
+from . import mandi
 
 app = FastAPI(title="AgriTwinAI")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
