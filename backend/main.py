@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 load_dotenv()
 import sqlite3, httpx
 from datetime import date, timedelta
+python-dotenv
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 import auth
